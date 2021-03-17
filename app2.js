@@ -11,6 +11,7 @@ const server =
 
       res.write('<html> <head> <title> Served </title> </head>')
       res.write('<body>')
+      res.write('<style>table, th, td {border: 2px solid black;border-collapse: collapse;}</style><table><tr><th>Name of the place</th><th>Number of hours to be spent</th><th>Expenses per person in place</th></tr><tr><td>Bali Indonesia</td><td>2 days</td><td>$100</td></tr><tr><td>Sydney</td><td>3 days</td><td>$1000</td></tr><tr><td>Maldives</td><td>1 day</td><td>$150</td></tr><tr><td>Paris</td><td>3 days</td><td>$750</td></tr></table>')
       res.write('Content \n')
       res.write('More content \n')
       res.write('Hello World')    
