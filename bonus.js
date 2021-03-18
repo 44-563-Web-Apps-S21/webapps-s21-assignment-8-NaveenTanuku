@@ -18,17 +18,16 @@ const server =
       console.log("Queries: " + search_params)
 
       if (req.method === 'GET' ) {
-        
+       
           console.log("Look for query parameter data: " + search_params.get("data"))
 
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-        console.log(`Math.cbrt(${search_params.get("x")}) is ${Math.cbrt(search_params.get("x"))}`)
-        console.log(`Math.cbrt${search_params.get("y")}) is ${Math.cbrt(search_params.get("y"))}`)
-        res.write(`Math.cbrt(${search_params.get("x")}) is ${Math.cbrt(search_params.get("x"))}`+'\n')
-        res.write(`Math.cbrt${search_params.get("y")}) is ${Math.cbrt(search_params.get("y"))}`)
-        res.end();
+          var bodyparts = ["eye", "nose", "ears", "mouth", "legs", "hands"];
+          index = Math.floor(Math.random() * Math.floor(5))
+          res.write(bodyparts[index]);
+          res.end();
         
       } else {
         console.log("Status 404")
